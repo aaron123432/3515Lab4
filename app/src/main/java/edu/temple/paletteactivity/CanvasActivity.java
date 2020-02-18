@@ -23,6 +23,6 @@ public class CanvasActivity extends AppCompatActivity {
 
         TextView view = findViewById(R.id.textView);
         view.setText(color);
-        finish();
+        //finish();
     }
 }

@@ -36,9 +36,12 @@ public class PaletteActivity extends AppCompatActivity {
                 Intent intent = new Intent(PaletteActivity.this, CanvasActivity.class);
 
                 if(position != 0){
-                    intent.putExtra("Color", list.get(position).toString());
+                    intent.putExtra("Color", list.get(position));
+                    startActivity(intent);
+                }else{
+
                 }
-                startActivity(intent);
+
             }
 
             @Override
