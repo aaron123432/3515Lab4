@@ -19,10 +19,20 @@ public class CanvasActivity extends AppCompatActivity {
         String color = intent.getStringExtra("Color");
 
         ConstraintLayout layout = findViewById(R.id.constraint);
-        layout.setBackgroundColor(Color.parseColor(color));
-
         TextView view = findViewById(R.id.textView);
         view.setText(color);
+
+        if(color.compareToIgnoreCase("Azul") == 0){
+            color = "Blue";
+        }else if(color.compareToIgnoreCase("Verde") == 0){
+            color = "Green";
+        }else if(color.compareToIgnoreCase("Rojo") == 0){
+            color = "Red";
+        }
+
+        layout.setBackgroundColor(Color.parseColor(color));
+
+
         //finish();
     }
 }
