@@ -26,6 +26,7 @@ public class PaletteActivity extends AppCompatActivity {
 
 
         Resources res = getResources();
+        final String topic = getResources().getString(R.string.app_name);
         final String[] color = res.getStringArray(R.array.color);
         Spinner spinner = findViewById(R.id.spinner);
         final ColorAdapter adapter = new ColorAdapter(color, this);
@@ -35,7 +36,6 @@ public class PaletteActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(PaletteActivity.this, CanvasActivity.class);
-
                 if(position != 0){
                     intent.putExtra("Color", color[position]);
                     startActivity(intent);

@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CanvasActivity" android:label="CanvasActivity"></activity>
+        <activity android:name=".CanvasActivity" android:label="@string/CanvasActivity"></activity>
         <activity android:name=".PaletteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
